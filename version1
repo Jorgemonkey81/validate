@@ -1,0 +1,20 @@
+// This is called by a different function, accepts user input, and should validate it before returning the value.
+// When entering a number, validation works fine.  If you enter a letter, it repeats "Error.  Please enter a number between 1-4: " 
+// over & over.
+
+
+int getMathOperation()
+{
+	int userOption;
+
+	cout << "Please enter in a choice (1,2,3,4): ";
+	cin >> userOption;
+
+	while (userOption != 1 || userOption != 2 || userOption != 3 || userOption !=4)
+	{
+		cout << "Error.  Please enter a number between 1-4: ";
+		cin >> userOption;
+	} 
+	
+	return userOption;
+}
